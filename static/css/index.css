@@ -27,6 +27,11 @@ pre, code, kbd, samp {
   padding-bottom: 0;
 }
 
+/* Reduce extra space below masthead hero */
+.masthead-hero .hero-body {
+  padding-bottom: 1.5rem; /* Bulma default section spacing feel */
+}
+
 .lead-banner {
   font-family: 'DM Sans', 'Noto Sans', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
