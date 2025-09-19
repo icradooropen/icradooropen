@@ -89,7 +89,7 @@
         <h2 class="title is-4">TL;DR</h2>
         <div class="content">
           <ul>
-            <li>Stage-conditioned imitation learning (StageACT) improves performance for a non-Markovian, long-horizon task.</li>
+            <li>Stage-conditioned imitation learning (StageACT) helps disambiguate partial observations in long-horizon tasks.</li> 
             <li>55% success on unseen doors → 2–5× the ACT baselines—with shorter completion time.</li>
             <li>Stage prompts enable recovery and intentional out-of-sequence behaviors.</li>
           </ul>
@@ -149,7 +149,7 @@
         <div class="content has-text-centered" style="margin-top: 1rem;">
           <div style="max-width: 720px; margin: 0 auto;">
             <img src="./static/images/fig_method_software_v2.png" alt="StageACT software overview" style="border-radius: 10px; width: 100%; height: auto;" loading="lazy"/>
-            <p class="is-size-6 has-text-grey" style="margin-top: 0.5rem;">StageACT is an ACT-based policy with stage conditioning alongside image and robot-state observations.</p>
+            <p class="is-size-6 has-text-grey" style="margin-top: 0.5rem;">Our framework combines stage-level guidance with lowlevel control, allowing policies to disambiguate partial observations and execute contact-rich tasks more reliably.</p>
           </div>
         </div>
       </div>
@@ -226,28 +226,7 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 id="dataset" class="title is-3">Dataset</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            The dataset and code will be released soon. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{...}</code></pre>
-  </div>
-</section>
 
 
 </body>
