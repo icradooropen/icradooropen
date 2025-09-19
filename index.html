@@ -36,7 +36,7 @@
 
           <div class="column has-text-centered">
             <div class="action-bar">
-              <!-- Paper (PDF) -->
+              <!-- Paper (TBA) -->
               <span class="action-item">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
@@ -57,15 +57,7 @@
                 </a>
               </span>
               <!-- Dataset -->
-              <span class="action-item">
-                <a href="#dataset"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Dataset</span>
-                </a>
-              </span>
+
               <!-- Code -->
               <span class="action-item">
                 <a href="#"
@@ -73,7 +65,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code(TBA)</span>
                 </a>
               </span>
             </div>
@@ -81,7 +73,8 @@
           </div>
           <img src="./static/images/door_push_title_v2.png" alt="Teaser: door push v2" style="border-radius: 10px; width: 100%; height: auto; margin-top: 0.75rem;" loading="lazy"/>
           <p class="subtitle is-5" style="margin-top: 0.5rem;">
-            Unitree G1 autonomously opens a real office door—search → rotate → push → walk through.
+            Autonomous door opening by the G1 humanoid robot in a real-world office. Time-synchronized front (top) and back (bottom) views illustrate the full sequence of contact-rich, long-horizon loco-manipulation task: approaching the handle → rotating the latch → pushing the door open →  and walking through.
+            This demonstration highlights StageACT’s ability to couple locomotion with manipulation and complete the task autonomously without external sensing (e.g., AR tags) or privileged door information.
           </p>
         </div>
       </div>
@@ -120,7 +113,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Humanoid robots promise to operate in everyday human environments without requiring modifications to the surroundings. Among the many skills needed, opening doors is essential, as doors are the most common gateways in built spaces and often limit where a robot can go. Door opening, however, poses unique challenges as it is a long-horizon task under partial observability, such as reasoning about the door's unobservable latch state that dictates whether the robot should rotate the handle or push the door. This ambiguity makes standard behavior cloning prone to mode collapse, yielding blended or out-of-sequence actions.
+              Humanoid robots promise to operate in everyday human environments without requiring modifications to the surroundings. Among the many skills needed, opening doors is essential, as doors are the most common gateways in built spaces and often limit where a robot can go. Door opening, however, poses unique challenges as it is a long-horizon task under partial observability, such as reasoning about the door’s unobservable latch state that dictates whether the robot should rotate the handle or push the door. This ambiguity makes standard behavior cloning prone to mode collapse, yielding blended or out-of-sequence actions. We introduce StageACT, a stage-conditioned imitation learning framework that augments low-level policies with task-stage inputs. This effective addition increases robustness to partial observability, leading to higher success rates and shorter completion times. On a humanoid operating in a real-world office environment, StageACT achieves a 55% success rate on previously unseen doors, more than doubling the best baseline. Moreover, our method supports intentional behavior guidance through stage prompting, enabling recovery behaviors. These results highlight stage conditioning as a lightweight yet powerful mechanism for long-horizon humanoid loco-manipulation.
             </p>
             <p>
               We introduce <strong>StageACT</strong>, a stage-conditioned imitation learning framework that augments low-level policies with task-stage inputs. This simple addition increases robustness to partial observability, leading to higher success rates and shorter completion times. On a humanoid operating in a real-world office environment, <strong>StageACT</strong> achieves a 55\% success rate on previously unseen doors, more than doubling the best baseline. Moreover, our method supports intentional behavior guidance through stage prompting, enabling recovery behaviors. These results highlight stage conditioning as a lightweight yet powerful mechanism for long-horizon humanoid loco-manipulation.
