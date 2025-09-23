@@ -48,7 +48,7 @@
               </span>
               <!-- Video -->
               <span class="action-item">
-                <a href="#dooropen-video"
+                <a href="https://youtu.be/iqnkwkg7u7k" 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-video"></i>
@@ -102,7 +102,6 @@
 
 <!-- Additional static items below abstract -->
 
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -112,7 +111,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Humanoid robots promise to operate in everyday human environments without requiring modifications to the surroundings. Among the many skills needed, opening doors is essential, as doors are the most common gateways in built spaces and often limit where a robot can go. Door opening, however, poses unique challenges as it is a long-horizon task under partial observability, such as reasoning about the door’s unobservable latch state that dictates whether the robot should rotate the handle or push the door. This ambiguity makes standard behavior cloning prone to mode collapse, yielding blended or out-of-sequence actions. We introduce StageACT, a stage-conditioned imitation learning framework that augments low-level policies with task-stage inputs. This effective addition increases robustness to partial observability, leading to higher success rates and shorter completion times. On a humanoid operating in a real-world office environment, StageACT achieves a 55% success rate on previously unseen doors, more than doubling the best baseline. Moreover, our method supports intentional behavior guidance through stage prompting, enabling recovery behaviors. These results highlight stage conditioning as a lightweight yet powerful mechanism for long-horizon humanoid loco-manipulation.
+              Humanoid robots promise to operate in everyday human environments without requiring modifications to the surroundings. Among the many skills needed, opening doors is essential, as doors are the most common gateways in built spaces and often limit where a robot can go. Door opening, however, poses unique challenges as it is a long-horizon task under partial observability, such as reasoning about the door’s unobservable latch state that dictates whether the robot should rotate the handle or push the door. This ambiguity makes standard behavior cloning prone to mode collapse, yielding blended or out-of-sequence actions. 
             </p>
             <p>
               We introduce <strong>StageACT</strong>, a stage-conditioned imitation learning framework that augments low-level policies with task-stage inputs. This simple addition increases robustness to partial observability, leading to higher success rates and shorter completion times. On a humanoid operating in a real-world office environment, <strong>StageACT</strong> achieves a 55% success rate on previously unseen doors, more than doubling the best baseline. Moreover, our method supports intentional behavior guidance through stage prompting, enabling recovery behaviors. These results highlight stage conditioning as a lightweight yet powerful mechanism for long-horizon humanoid loco-manipulation.
@@ -121,7 +120,7 @@
         </div>
       </div>
       <div class="column is-5">
-        <video id="dooropen-video" controls muted playsinline preload="metadata" style="width: 100%; border-radius: 10px;">
+        <video autoplay muted loop playsinline height="100%">
           <source src="./static/videos/dooropen.mp4" type="video/mp4">
         </video>
       </div>
@@ -129,6 +128,74 @@
     <!--/ Abstract. -->
   </div>
 </section>
+
+<!-- video of working -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <iframe src="https://www.youtube.com/embed/iqnkwkg7u7k" title="Humanoid Door Opening" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<!-- GIFS for challenges and GIFS for imitation failing -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Challenges in Partial Observability</h2>
+
+    <!-- First Row: 1 GIF and Text Column -->
+    <p>
+      Key information, such as the latch state of the door, is not directly observable. Given visually almost-identical observations, similar actions can lead to drastically different outcomes.  
+    </p>
+
+    <div class="columns">
+      <div class="column">
+        <div class="dataset">
+          <img src="./static/images/cam1.gif" alt="doorpush fail" style="width: 100%; height: auto;">
+          <p class="caption" style="text-align: center;"><span style="color: red;">Failure case</span> - door remains latched </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="dataset">
+          <img src="./static/images/cam2.gif" alt="doorpush success" style="width: 100%; height: auto;">
+          <p class="caption" style="text-align: center;"><span style="color: green;">Successful case</span> - door unlatched </p>
+        </div>
+      </div>
+    </div>
+
+  <!-- Second Row: 3 GIFs with Text -->
+  <div class="columns">
+    <div class="column">
+      <div class="contact-policy">
+        <img src="./static/images/door1.gif" alt="blending trajectories" style="width: 100%; height: 500px; object-fit: cover;">
+      </div>
+    </div>
+    <div class="column">
+      <div class="contact-policy">
+        <img src="./static/images/door2.gif" alt="out of sequence" style="width: 100%; height: 500px; object-fit: cover;">
+      </div>
+    </div>
+    <div class="column">
+      <div class="contact-policy">
+        <img src="./static/images/door3.gif" alt="imprecise trajectories" style="width: 100%; height: 500px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+  <p class="subtitle has-text-centered">
+    <span class="dnerf"> <span style="color: red;">Failure cases</span> of the naive imitation learning policy that struggle to disambiguate partial observations in a long-horizon door opening task. (Left) Blending of trajectories, (Middle) out of sequence motions, (Right) imprecise trajectories.
+  </p>
+  </div>
+</section>
+
 
 
 
